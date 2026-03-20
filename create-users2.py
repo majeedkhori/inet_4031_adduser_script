@@ -18,7 +18,8 @@ import sys
 def main():
     # ask user if they want to do a dry run, store as boolean
     # dry run skips commands and just prints out what would happen later on
-    dry_run_input = input("Do you want to do a dry run? (Y/N): ").strip().upper()
+    with open('/dev/tty') as tty:
+        dry_run_input = input("Do you want to do a dry run? (Y/N): ", file=tty)
     dry_run = True if dry_run_input == "Y" else False
 
     # loop through each line of input file via standard input
