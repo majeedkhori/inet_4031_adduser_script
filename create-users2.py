@@ -19,7 +19,7 @@ def main():
     # ask user if they want to do a dry run, store as boolean
     # dry run skips commands and just prints out what would happen later on
     with open('/dev/tty') as tty:
-        print("Do you want to do a dry run? (Y/N): ", end='', flush-True)
+        print("Do you want to do a dry run? (Y/N): ", end='', flush=True)
         dry_run_input = tty.readline().strip().upper()
     dry_run = True if dry_run_input == "Y" else False
 
