@@ -17,6 +17,7 @@ import sys
 
 def main():
     # ask user if they want to do a dry run, store as boolean
+    # dry run skips commands and just prints out what would happen later on
     dry_run_input = input("Do you want to do a dry run? (Y/N): ").strip().upper
     dry_run = True if dry_run_input == "Y" else False
 
